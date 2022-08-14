@@ -3,6 +3,7 @@ import './App.css';
 import ToDoListForm from './ToDoListForm';
 import ToDoList from './ToDoList';
 import data from "./data.json"
+import Header from './header';
 
 //take out data boilerplate after adding css style
 
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
       <ToDoListForm addTask={addTask}/>
     </div>
