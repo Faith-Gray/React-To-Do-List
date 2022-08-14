@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 import ToDoListForm from './ToDoListForm';
 import ToDoList from './ToDoList';
 import data from "./data.json"
@@ -10,7 +10,7 @@ function App() {
 
   const handleToggle = (id) => {
     let mapped = ToDoList.map(task => {
-      return task.id == Number(id) ? { ...task, complete: !task.complete } : { ...task};
+      return task.id === Number(id) ? { ...task, complete: !task.complete } : { ...task};
     });
     setToDoList(mapped);
   }
@@ -36,7 +36,7 @@ function App() {
   )
 }
 
-export default App
+export default App;
 
 
 //to do list

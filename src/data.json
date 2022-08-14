@@ -1,18 +1,18 @@
 [{
     "id": 1,
-    "task": "Give dog a bath",
+    "task": "Give Ruby a bath",
     "complete": true
   }, {
     "id": 2,
-    "task": "Do laundry",
+    "task": "Fold Clothes",
     "complete": true
   }, {
     "id": 3,
-    "task": "Vacuum floor",
+    "task": "Vacuum",
     "complete": false
   }, {
     "id": 4,
-    "task": "Feed cat",
+    "task": "Do dishes",
     "complete": true
   }, {
     "id": 5,
@@ -28,15 +28,15 @@
     "complete": true
   }, {
     "id": 8,
-    "task": "Change linens",
+    "task": "Don't eat sugar",
     "complete": false
   }, {
     "id": 9,
-    "task": "Rake leaves",
+    "task": "Work",
     "complete": true
   }, {
     "id": 10,
-    "task": "Bake Cookies",
+    "task": "Watch youtube videos",
     "complete": false
   }, {
     "id": 11,
@@ -44,7 +44,7 @@
     "complete": true
   }, {
     "id": 12,
-    "task": "Read book",
+    "task": "pick up clothes",
     "complete": true
   }, {
     "id": 13,
@@ -52,30 +52,7 @@
     "complete": false
   }, {
     "id": 14,
-    "task": "Give dog a bath",
+    "task": "Go to gym",
     "complete": false
-  }, {
-    "id": 15,
-    "task": "Do laundry",
-    "complete": false
-  }, {
-    "id": 16,
-    "task": "Vacuum floor",
-    "complete": false
-  }, {
-    "id": 17,
-    "task": "Feed cat",
-    "complete": true
-  }, {
-    "id": 18,
-    "task": "Change light bulbs",
-    "complete": false
-  }, {
-    "id": 19,
-    "task": "Go to Store",
-    "complete": false
-  }, {
-    "id": 20,
-    "task": "Fill gas tank",
-    "complete": false
+
 }]
