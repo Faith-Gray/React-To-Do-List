@@ -1,0 +1,28 @@
+body{
+    background-color: #352f5b;
+}
+  
+.container{
+    max-width: 450px;
+}
+  
+input[type=text],
+input[type=text]:focus{
+    color: #fff;
+    border: none;
+    background-color: rgba(0, 0, 0, .2);
+}
+  
+ul{
+    background-color: #423a6f;
+    color: #F8F9FA;
+}
+  
+.delete{
+    cursor: pointer;
+}
+
+.App {
+    text-align: center;
+}
+
