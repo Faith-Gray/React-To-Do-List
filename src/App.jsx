@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import ToDo from './ToDo'
-import ToDoList from './ToDoList'
+import ToDoListForm from './ToDoListForm';
+import ToDoList from './ToDoList';
+import data from "./data.json"
 
 function App() {
-  const [toDoList, setToDoList] = useState(addTask)
+  const [ toDoList, setToDoList ] = useState(data);
 
 
-  const handleToggle = (key) => {
+  const handleToggle = (id) => {
     let mapped = ToDoList.map(task => {
-      return task.id == key ? { ...task, complete: !task.complete } : { ...task};
+      return task.id == Number(id) ? { ...task, complete: !task.complete } : { ...task};
     });
     setToDoList(mapped);
   }
@@ -21,16 +22,16 @@ function App() {
     setToDoList(filtered);
   }
 
-  const addTask = (userInput ) => {
+  const addTask = (formInput) => {
     let copy = [...toDoList];
-    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    copy = [...copy, { id: toDoList.length + 1, task: formInput, complete: false }];
     setToDoList(copy);
   }
 
   return (
     <div className="App">
       <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
-      <ToDoForm addTask={addTask}/>
+      <ToDoListForm addTask={addTask}/>
     </div>
   )
 }
