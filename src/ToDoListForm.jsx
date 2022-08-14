@@ -1,28 +1,25 @@
 import { useState } from "react";
 
-function ToDoListForm() {
-    const [formInput, setFormInput] = useState('');
+function ToDoListForm(addTask) {
+    const [ formInput, setFormInput ] = useState('');
 
-    function handleChange(event) {
-        const {name, value} = event.target
-        setTasks(prevTask => ({
-          ...prevTask,
-          [name]: value
-        }))
-      
+    function handleChange(e) {
+        setFormInput(e.currentTarget.value)
     }
     
-    function handleSubmit(event) {
-        event.preventDefault()
-        
+    function handleSubmit(e) {
+        e.preventDefault();
+        addTask(formInput);
+        setFormInput("");
+
         console.log(tasks)
     }
 
     return (
-        <div>
- 
-
-        </div>
+        <form onSubmit={handleSubmit}>
+            <input value={formInput} type="text" onChange={handleChange} placeholder="Enter task"/>
+            <button>Submit</button>
+        </form>
     );
 };
   

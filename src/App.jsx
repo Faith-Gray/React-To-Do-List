@@ -4,7 +4,7 @@ import ToDo from './ToDo'
 import ToDoList from './ToDoList'
 
 function App() {
-  const [toDoList, setToDoList] = useState(0)
+  const [toDoList, setToDoList] = useState(addTask)
 
 
   const handleToggle = (key) => {
@@ -21,11 +21,16 @@ function App() {
     setToDoList(filtered);
   }
 
+  const addTask = (userInput ) => {
+    let copy = [...toDoList];
+    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    setToDoList(copy);
+  }
+
   return (
     <div className="App">
-
-
-
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
+      <ToDoForm addTask={addTask}/>
     </div>
   )
 }
