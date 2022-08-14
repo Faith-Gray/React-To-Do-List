@@ -4,12 +4,14 @@ import ToDoListForm from './ToDoListForm';
 import ToDoList from './ToDoList';
 import data from "./data.json"
 
+//take out data boilerplate after adding css style
+
 function App() {
   const [ toDoList, setToDoList ] = useState(data);
 
 
   const handleToggle = (id) => {
-    let mapped = ToDoList.map(task => {
+    let mapped = ToDoList.map((task) => {
       return task.id === Number(id) ? { ...task, complete: !task.complete } : { ...task};
     });
     setToDoList(mapped);

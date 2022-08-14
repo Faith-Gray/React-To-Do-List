@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ToDoListForm(addTask) {
+function ToDoListForm({addTask}) {
     const [ formInput, setFormInput ] = useState('');
 
     function handleChange(e) {
@@ -11,8 +11,6 @@ function ToDoListForm(addTask) {
         e.preventDefault();
         addTask(formInput);
         setFormInput("");
-
-        console.log(tasks)
     }
 
     return (
