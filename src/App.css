@@ -1,3 +1,7 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
 body{
     background-color: #352f5b;
 }
@@ -24,5 +28,6 @@ ul{
 
 .App {
     text-align: center;
+    color: white;
 }
 
